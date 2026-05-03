@@ -1,23 +1,23 @@
-function HeroSection() {
+function HeroSection({ brand, hero }) {
   return (
     <section id="home" className="mx-auto flex min-h-screen max-w-6xl items-center px-6 pt-24">
       <div className="grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-center">
         <div className="reveal active">
           <p className="mb-4 inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300">
-            Software Engineer · 3 Years Experience
+            {brand.role} · {brand.experience}
           </p>
           <h1 className="text-5xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
-            Hi, I&apos;m <span className="text-cyan-400">John Doe</span>. I build fast, clean, user-friendly software.
+            {hero.intro} <span className="text-cyan-400">{brand.fullName}</span>. {hero.title}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            I create responsive web applications, intuitive interfaces, and dependable backend systems that help teams ship better digital products.
+            {hero.description}
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href="#projects" className="shadow-glow rounded-full bg-cyan-400 px-7 py-3 text-center font-bold text-slate-950 transition hover:-translate-y-1 hover:bg-cyan-300">
-              View Projects
+            <a href={hero.ctaPrimary.href} className="shadow-glow rounded-full bg-cyan-400 px-7 py-3 text-center font-bold text-slate-950 transition hover:-translate-y-1 hover:bg-cyan-300">
+              {hero.ctaPrimary.label}
             </a>
-            <a href="#about" className="rounded-full border border-white/15 px-7 py-3 text-center font-bold text-white transition hover:-translate-y-1 hover:border-cyan-400 hover:text-cyan-300">
-              Learn More
+            <a href={hero.ctaSecondary.href} className="rounded-full border border-white/15 px-7 py-3 text-center font-bold text-white transition hover:-translate-y-1 hover:border-cyan-400 hover:text-cyan-300">
+              {hero.ctaSecondary.label}
             </a>
           </div>
         </div>
@@ -34,16 +34,11 @@ function HeroSection() {
                   <span className="h-3 w-3 rounded-full bg-green-400"></span>
                 </div>
                 <pre className="overflow-hidden text-sm leading-7 text-slate-300">
-                  <code>{`const engineer = {
-  name: 'John Doe',
-  role: 'Software Engineer',
-  experience: '3 years',
-  focus: ['Web Apps', 'APIs', 'UX']
-};`}</code>
+                  <code>{hero.codeSnippet}</code>
                 </pre>
               </div>
               <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-4 text-sm text-cyan-200">
-                Currently building scalable products with modern web technologies.
+                {hero.status}
               </div>
             </div>
           </div>

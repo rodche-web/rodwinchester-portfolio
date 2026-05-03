@@ -1,9 +1,9 @@
-function Navbar({ menuOpen, onToggleMenu, onCloseMenu }) {
+function Navbar({ menuOpen, onToggleMenu, onCloseMenu, brand, navLinks }) {
   return (
     <header className="nav-blur fixed top-0 z-50 w-full border-b border-white/10 bg-slate-950/70">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#home" className="text-xl font-extrabold tracking-tight text-white">
-          John<span className="text-cyan-400">Doe</span>
+          {brand.firstName}<span className="text-cyan-400">{brand.lastName}</span>
         </a>
 
         <button
@@ -19,15 +19,16 @@ function Navbar({ menuOpen, onToggleMenu, onCloseMenu }) {
         <div
           className={`${menuOpen ? 'block' : 'hidden'} absolute left-0 top-full w-full border-b border-white/10 bg-slate-950/95 px-6 py-4 md:static md:flex md:w-auto md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0`}
         >
-          <a onClick={onCloseMenu} href="#about" className="block py-2 text-sm font-medium text-slate-300 transition hover:text-cyan-400">
-            About
-          </a>
-          <a onClick={onCloseMenu} href="#skills" className="block py-2 text-sm font-medium text-slate-300 transition hover:text-cyan-400">
-            Skills
-          </a>
-          <a onClick={onCloseMenu} href="#projects" className="block py-2 text-sm font-medium text-slate-300 transition hover:text-cyan-400">
-            Projects
-          </a>
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              onClick={onCloseMenu}
+              href={link.href}
+              className="block py-2 text-sm font-medium text-slate-300 transition hover:text-cyan-400"
+            >
+              {link.label}
+            </a>
+          ))}
           <a
             onClick={onCloseMenu}
             href="#contact"

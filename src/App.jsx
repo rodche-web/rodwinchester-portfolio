@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import ProjectsSection from './components/ProjectsSection'
 import SiteFooter from './components/SiteFooter'
 import SkillsSection from './components/SkillsSection'
+import portfolioData from './data/portfolioData'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -42,16 +43,22 @@ function App() {
   return (
     <div className="bg-slate-950 text-slate-100 font-sans antialiased">
       <BackgroundBlobs />
-      <Navbar menuOpen={menuOpen} onToggleMenu={() => setMenuOpen((open) => !open)} onCloseMenu={closeMenuOnMobile} />
+      <Navbar
+        menuOpen={menuOpen}
+        onToggleMenu={() => setMenuOpen((open) => !open)}
+        onCloseMenu={closeMenuOnMobile}
+        brand={portfolioData.brand}
+        navLinks={portfolioData.navLinks}
+      />
 
       <main>
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <ContactSection />
+        <HeroSection brand={portfolioData.brand} hero={portfolioData.hero} />
+        <AboutSection about={portfolioData.about} />
+        <SkillsSection skills={portfolioData.skills} />
+        <ProjectsSection projects={portfolioData.projects} />
+        <ContactSection contact={portfolioData.contact} email={portfolioData.brand.email} />
       </main>
-      <SiteFooter />
+      <SiteFooter fullName={portfolioData.brand.fullName} />
     </div>
   )
 }
