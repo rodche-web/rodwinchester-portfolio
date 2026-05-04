@@ -41,7 +41,7 @@ function App() {
   }
 
   return (
-    <div className="bg-slate-950 text-slate-100 font-sans antialiased">
+    <div className="app-bg min-h-screen text-[var(--on-background)] antialiased">
       <BackgroundBlobs />
       <Navbar
         menuOpen={menuOpen}

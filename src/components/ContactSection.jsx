@@ -1,10 +1,10 @@
 function ContactSection({ contact, email }) {
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-6 py-24">
-      <div className="reveal shadow-glow rounded-[2rem] border border-cyan-400/20 bg-cyan-400/10 p-8 text-center md:p-12">
-        <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">{contact.heading}</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-slate-300">{contact.description}</p>
-        <a href={`mailto:${email}`} className="mt-8 inline-flex rounded-full bg-cyan-400 px-7 py-3 font-bold text-slate-950 transition hover:-translate-y-1 hover:bg-cyan-300">
+    <section id="contact" className="container-frame section-stack">
+      <div className="surface-card reveal p-8 text-center md:p-12">
+        <h2 className="font-heading text-3xl font-semibold tracking-[-0.01em] text-[var(--on-surface)] md:text-4xl">{contact.heading}</h2>
+        <p className="mx-auto mt-4 max-w-2xl text-[var(--on-surface-variant)]">{contact.description}</p>
+        <a href={`mailto:${email}`} className="btn-primary focus-ring mt-8 inline-flex px-7 py-3 transition hover:brightness-105">
           {email}
         </a>
       </div>
