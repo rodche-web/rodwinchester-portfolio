@@ -1,3 +1,8 @@
+import aesDashboard from '../assets/projects/aes-dashboard.png'
+import pshsSis from '../assets/projects/pshs-sis.png'
+import pshsNfaps from '../assets/projects/pshs-nfaps.png'
+import pshsErp from '../assets/projects/pshs-erp.png'
+
 const portfolioData = {
   brand: {
     firstName: 'John',
@@ -54,22 +59,33 @@ const portfolioData = {
       "A few sample projects that show John's ability to build useful, scalable, and visually polished applications.",
     items: [
       {
-        title: 'TaskFlow',
-        description: 'A productivity dashboard for managing tasks, deadlines, and team workflows.',
+        title: 'Automated Examination System (NPC)',
+        description:
+          'Allows examinees to take NPC exam online, lets admins create question banks and exams, and sends certificates to examinees through email.',
         tags: ['React', 'Node.js', 'MongoDB'],
+        screenshot: aesDashboard,
         gradient: 'from-cyan-400/30 to-blue-600/20',
       },
       {
-        title: 'ShopLite',
-        description: 'A responsive e-commerce storefront with product filtering and cart interactions.',
-        tags: ['JavaScript', 'Tailwind', 'API'],
+        title: 'Student Information System',
+        description: 'Stores and monitors student records and generates student report cards.',
+        tags: ['React', 'Node.js', 'MongoDB'],
+        screenshot: pshsSis,
         gradient: 'from-violet-400/30 to-fuchsia-600/20',
       },
       {
-        title: 'DevTrack',
-        description: 'A developer analytics app that visualizes repository activity and sprint progress.',
-        tags: ['Vue', 'Express', 'PostgreSQL'],
+        title: 'New Freshmen Admissions Processing System',
+        description: 'Allows users to apply for the PSHS exam.',
+        tags: ['React', 'Node.js', 'MongoDB'],
+        screenshot: pshsNfaps,
         gradient: 'from-emerald-400/30 to-cyan-600/20',
+      },
+      {
+        title: 'Project Monitoring System',
+        description: 'Enables project management and budget tracking.',
+        tags: ['React', 'Typescript', 'Node.js', 'PostgresDB'],
+        screenshot: pshsErp,
+        gradient: 'from-amber-400/30 to-orange-600/20',
       },
     ],
   },

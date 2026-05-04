@@ -12,7 +12,11 @@ function ProjectsSection({ projects }) {
       <div className="mt-12 grid gap-6 md:grid-cols-3">
         {projects.items.map((project) => (
           <article key={project.title} className="reveal overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-xl transition hover:-translate-y-2 hover:border-cyan-400/40">
-            <div className={`h-44 bg-gradient-to-br ${project.gradient}`}></div>
+            {project.screenshot ? (
+              <img src={project.screenshot} alt={`${project.title} screenshot`} className="h-44 w-full object-cover" loading="lazy" />
+            ) : (
+              <div className={`h-44 bg-gradient-to-br ${project.gradient}`}></div>
+            )}
             <div className="p-6">
               <h3 className="text-2xl font-bold text-white">{project.title}</h3>
               <p className="mt-3 text-slate-300">{project.description}</p>
