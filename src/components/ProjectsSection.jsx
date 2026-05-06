@@ -6,7 +6,7 @@ function ProjectsSection({ projects }) {
           <p className="section-eyebrow">{projects.eyebrow}</p>
           <h2 className="font-heading mt-3 text-4xl font-semibold leading-[1.2] tracking-[-0.01em] text-[var(--on-surface)]">{projects.heading}</h2>
         </div>
-        <p className="max-w-xl text-[var(--on-surface-variant)]">{projects.description}</p>
+        {/* <p className="max-w-xl text-[var(--on-surface-variant)]">{projects.description}</p> */}
       </div>
 
       <div className="mt-12 grid gap-6 md:grid-cols-3">
