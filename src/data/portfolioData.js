@@ -5,12 +5,12 @@ import pshsErp from '../assets/projects/pshs-erp.png'
 
 const portfolioData = {
   brand: {
-    firstName: 'John',
-    lastName: 'Doe',
-    fullName: 'John Doe',
+    firstName: 'Rodwin',
+    lastName: 'Chester',
+    fullName: 'Rodwin Chester',
     role: 'Software Engineer',
     experience: '3 Years Experience',
-    email: 'john.doe@example.com',
+    email: 'rodwinchestermail@gmail.com',
   },
   navLinks: [
     { label: 'About', href: '#about' },
@@ -25,7 +25,7 @@ const portfolioData = {
     ctaPrimary: { label: 'View Projects', href: '#projects' },
     ctaSecondary: { label: 'Learn More', href: '#about' },
     codeSnippet: `const engineer = {
-  name: 'John Doe',
+  name: 'Rodwin Chester',
   role: 'Software Engineer',
   experience: '3 years',
   focus: ['Web Apps', 'APIs', 'UX']
@@ -36,7 +36,7 @@ const portfolioData = {
     eyebrow: 'About Me',
     heading: 'Engineer with a product mindset.',
     paragraphs: [
-      "I'm John Doe, a software engineer with 3 years of experience designing, developing, and maintaining web applications. I enjoy turning complex problems into simple, reliable, and polished user experiences.",
+      "I'm Rodwin Chester, a software engineer with 3 years of experience designing, developing, and maintaining web applications. I enjoy turning complex problems into simple, reliable, and polished user experiences.",
       'My work spans frontend interfaces, backend APIs, database design, and performance optimization. I care about readable code, strong collaboration, and building tools that people actually enjoy using.',
     ],
   },
