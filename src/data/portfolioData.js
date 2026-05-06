@@ -61,28 +61,28 @@ const portfolioData = {
       {
         title: 'Automated Examination System (NPC)',
         description:
-          'Allows examinees to take NPC exam online, lets admins create question banks and exams, and sends certificates to examinees through email.',
+          'An online platform that lets users apply for the Philippine Science High School National Competitive Examination. Allows examinees to take NPC exam online, lets admins create question banks and exams, and sends certificates to examinees through email.',
         tags: ['React', 'Node.js', 'MongoDB'],
         screenshot: aesDashboard,
         gradient: 'from-cyan-400/30 to-blue-600/20',
       },
       {
         title: 'Student Information System',
-        description: 'Stores and monitors student records and generates student report cards.',
+        description: 'A centralized system used by Philippine Science High School to store, monitor, and analyze student records effectively. It also allows its users to export a PDF copy of a student\'s report card.',
         tags: ['React', 'Node.js', 'MongoDB'],
         screenshot: pshsSis,
         gradient: 'from-violet-400/30 to-fuchsia-600/20',
       },
       {
         title: 'New Freshmen Admissions Processing System',
-        description: 'Allows users to apply for the PSHS exam.',
+        description: 'An online platform that lets users apply for the Philippine Science High School National Competitive Examination.',
         tags: ['React', 'Node.js', 'MongoDB'],
         screenshot: pshsNfaps,
         gradient: 'from-emerald-400/30 to-cyan-600/20',
       },
       {
         title: 'Project Monitoring System',
-        description: 'Enables project management and budget tracking.',
+        description: 'A enterprise resource planning web application that enables management of projects and tracking of budget and expenditures.',
         tags: ['React', 'Typescript', 'Node.js', 'PostgresDB'],
         screenshot: pshsErp,
         gradient: 'from-amber-400/30 to-orange-600/20',
